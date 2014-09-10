@@ -39,6 +39,7 @@ function format_address($fields, $br=false)
 
 function format_currency($value, $symbol=true)
 {
-	$fmt = numfmt_create( config_item('locale'), NumberFormatter::CURRENCY );
-	return numfmt_format_currency($fmt, $value, config_item('currency_iso'));
+	/*$fmt = numfmt_create( config_item('locale'), NumberFormatter::CURRENCY );
+	return numfmt_format_currency($fmt, $value, config_item('currency_iso'));*/
+	return $value;
 }

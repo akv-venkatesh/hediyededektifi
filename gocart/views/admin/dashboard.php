@@ -1,4 +1,4 @@
-<?php if(!$payment_module_installed):?>
+<?php /*if(!$payment_module_installed):?>
 	
 	<div class="alert">
 		<a class="close" data-dismiss="alert">×</a>
@@ -13,7 +13,7 @@
 		<strong><?php echo lang('common_note') ?>:</strong> <?php echo lang('no_shipping_module_installed'); ?>
 	</div>
 
-<?php endif;?>
+<?php endif;*/ ?>
 
 <h2><?php echo lang('recent_orders') ?></h2>
 <table class="table table-striped">

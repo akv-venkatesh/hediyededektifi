@@ -78,10 +78,10 @@ class Auth
         if (!$admin)
         {
             //check the cookie
-            if(isset($_COOKIE['GoCartAdmin']))
+            if(isset($_COOKIE['SuperAdmin']))
             {
                 //the cookie is there, lets log the customer back in.
-                $info = $this->aes256Decrypt(base64_decode($_COOKIE['GoCartAdmin']));
+                $info = $this->aes256Decrypt(base64_decode($_COOKIE['SuperAdmin']));
                 $cred = json_decode($info, true);
 
                 if(is_array($cred))
@@ -158,7 +158,7 @@ class Auth
     
     private function generateCookie($data, $expire)
     {
-        setcookie('GoCartAdmin', $data, $expire, '/', $_SERVER['HTTP_HOST']);
+        setcookie('SuperAdmin', $data, $expire, '/', $_SERVER['HTTP_HOST']);
     }
 
     private function aes256Encrypt($data)
